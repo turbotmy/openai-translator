@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block page_title %}Enter your question{% endblock %}
+{% block body %}
+    {{ super() }}
+ 
+<form action="/" method="post">
+    <div class="form-group">
+        <label for="exampleFormControlInput1"></label>
+        <input class="form-control"
+        name = "question"
+        autocomplete="off"
+        placeholder="Enter a question or word"
+        required
+        />
+        <small id="emailHelp" class="form-text text-muted">We'll never share your question with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% if result %}
+<div class="result">{{ result }}</div>
+{% endif %}
+
+{% endblock %}

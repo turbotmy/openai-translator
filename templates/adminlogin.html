@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block page_title %}Admin Login{% endblock %}
+{% block body %}
+    {{ super() }}
+    <form action="/login" method="post" class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" name="id" placeholder="User Name" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="password" name="pw" placeholder="Password" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-success">Log In</button>
+  </form>
+{% endblock %}
